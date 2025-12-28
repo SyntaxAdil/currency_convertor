@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Abdur Rahman Adil" />
+    <title>Currency Converter || Abdur Rahman Adil</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./src/images/bg.jpg" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Tailwind CSS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      ::-webkit-inner-spin-button {
+        display: none;
+      }
+      option {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body
+    class="min-h-screen bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url('./src/images/bg.jpg')] bg-cover bg-center flex items-center justify-center px-4"
+  >
+    <!-- Main Card -->
+
+    <section
+      class="w-full max-w-md bg-white/10 backdrop-blur-xl rounded-2xl shadow-2xl p-6 text-white border border-gray-400"
+    >
+      <h1 class="text-3xl font-bold text-center mb-6 tracking-wide">
+        Currency Converter
+      </h1>
+
+      <!-- Amount -->
+      <div class="mb-5">
+        <label class="block text-sm mb-2 opacity-80">Enter Amount</label>
+        <input
+          type="number"
+          id="amount-in"
+          placeholder="0.00"
+          class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition"
+        />
+      </div>
+
+      <!-- Dropdown Box -->
+      <div class="flex items-center justify-between gap-3 dropdowns">
+        <!-- From -->
+        <div class="w-full">
+          <label class="block text-sm mb-2 opacity-80">From</label>
+          <div
+            class="flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-3 py-2"
+          >
+            <img src="https://flagsapi.com/US/flat/64.png" class="w-7 h-7" />
+            <select
+              id="from"
+              name="from"
+              class="bg-transparent w-full focus:outline-none text-white"
+            ></select>
+          </div>
+        </div>
+
+        <!-- Swap Icon -->
+        <div
+          class="mt-7 text-xl cursor-pointer hover:rotate-180 transition duration-300"
+        >
+          <i class="fas fa-arrow-right-arrow-left"></i>
+        </div>
+
+        <!-- To -->
+        <div class="w-full">
+          <label class="block text-sm mb-2 opacity-80">To</label>
+          <div
+            class="flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-3 py-2"
+          >
+            <img src="https://flagsapi.com/BD/flat/64.png" class="w-7 h-7" />
+            <select
+              id="to"
+              name="to"
+              class="bg-transparent w-full focus:outline-none text-white"
+            ></select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="message text-center text-sm mt-5 opacity-90">
+        1 USD = 122.2 BDT
+      </div>
+
+      <!-- Button -->
+      <button
+        id="convert-btn"
+        class="mt-6 w-full py-3 rounded-xl bg-linear-to-r from-cyan-400 to-blue-500 text-black font-semibold hover:scale-[1.02] active:scale-95 transition cursor-pointer"
+      >
+        Get Exchange Rate
+      </button>
+
+      <p class="text-center text-[14px] text-white/40 pt-5 select-none">
+        &copy; Abdur Rahman Adil
+      </p>
+    </section>
+
+    <!-- JS -->
+    <script src="./src/codes.js"></script>
+    <script src="./src/app.js"></script>
+  </body>
+</html>
